@@ -11,6 +11,7 @@ import numpy as np
 import traceback
 import asyncio
 from threading import Event
+import os
 
 # Try to import your bot, with better error handling
 try:
@@ -621,4 +622,5 @@ if __name__ == '__main__':
     # Reset state on startup
     web_bot.reset_state()
     
-    socketio.run(app, debug=True, port=5000, host='0.0.0.0')
+    port = int(os.environ.get("PORT", 5000))
+    socketio.run(app, debug=True, host='0.0.0.0', port=port)
