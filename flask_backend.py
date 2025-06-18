@@ -622,5 +622,5 @@ if __name__ == '__main__':
     # Reset state on startup
     web_bot.reset_state()
     
-    port = int(os.environ.get("PORT", 5000))
-    socketio.run(app, debug=True, host='0.0.0.0', port=port)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=8000)
