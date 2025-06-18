@@ -10,7 +10,7 @@ gunicorn flask_backend:app --bind 0.0.0.0:8000 &
 
 # Step 3: Install frontend dependencies
 echo "Installing frontend dependencies..."
-npm install
+npm ci
 
 # Step 4: Build and run the frontend
 echo "Building and starting frontend..."
